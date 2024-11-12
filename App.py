@@ -1,20 +1,34 @@
-import streamlit as st
-# Set the app title and add some color using markdown
-st.markdown("<h1 style='color: purple;'>Fun Adding App for Toddlers </h1>",🎉
-unsafe_allow_html=True)
-st.markdown("<h3 style='color: teal;'>Let's add two numbers together! </h3>",🤗
-unsafe_allow_html=True)
-# Get user input for the first number
-first_number = st.number_input("Enter the first number:", min_value=0, step=1)
-# Get user input for the second number
-second_number = st.number_input("Enter the second number:", min_value=0, step=1)
-# Calculate the sum when the button is pressed
-if st.button("Calculate Sum"):
-result = first_number + second_number
-st.markdown(f"<h2 style='color: green;'>The sum is: {result}</h2>",
-unsafe_allow_html=True)
-else:
-st.write("Enter numbers above and click 'Calculate Sum' to see the result!")
-# Footer for fun styling
-st.markdown("<p style='color: grey; font-style: italic;'>Made with for little❤️
-mathematicians!</p>", unsafe_allow_html=True)
+mport streamlit as st
+
+# Set up the title and description with emojis and a bright background color
+st.markdown(
+    """
+    <style>
+    .app-title {
+        color: #FF6347; 
+        font-size: 50px; 
+        text-align: center; 
+        font-weight: bold;
+    }
+    .instruction {
+        color: #4682B4; 
+        font-size: 25px; 
+        text-align: center;
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
+
+# App title
+st.markdown("<p class='app-title'>🎉 Fun Adding App for Toddlers 🎉</p>", unsafe_allow_html=True)
+st.markdown("<p class='instruction'>Let's add two numbers together!</p>", unsafe_allow_html=True)
+
+# Number inputs
+first_number = st.number_input("Enter the first number:", min_value=0, max_value=100)
+second_number = st.number_input("Enter the second number:", min_value=0, max_value=100)
+
+# Calculate and display result with a button
+if st.button("Add Them Up!"):
+    result = first_number + second_number
+    st.markdown(f"<h3 style='color: #32CD32; text-align: center;'>The sum is: {result} 🎈</h3>", unsafe_allow_html=True)
