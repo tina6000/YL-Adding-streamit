@@ -19,3 +19,4 @@ st.write("Enter numbers above and click 'Calculate Sum' to see the result!")
 st.markdown("<p style='color: grey; font-style: italic;'>Made with for little❤️
 mathematicians!</p>", unsafe_allow_html=True)
 
+
